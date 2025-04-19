@@ -1,0 +1,195 @@
+{
+    "Title": "House Layout",
+    "Credits": "Created by Fiona Zhou (fizhou@ucsc.edu).",
+    "InitialLocation": "Front Door",
+    "Locations": {
+        "Front Door": {
+            "Body": "You walk up to the front door of Ashley's house. She's away on vacation, and asked you to house sit. Let's go in.",
+            "Choices": [
+                {
+                    "Text": "Open door.",
+                    "Target": "Entryway"
+                }
+            ]
+        },
+        "Entryway": {
+            "Body": "Wow ... her house is absolutely amazing. You should take your shoes off first.", 
+            "Choices": [
+                {
+                    "Text": "Take shoes off.",
+                    "Target": "Take Shoes Off"
+                },
+                {
+                    "Text": "Leave them on.",
+                    "Target": "Living Room"
+                }
+            ]
+        },
+        "Take Shoes Off": {
+            "Body": "You take off your shoes. You put them next to the front door.", 
+            "Choices": [
+                {
+                    "Text": "Get up.",
+                    "Target": "Take Shoes Off 2"
+                }
+            ],
+            "Item": {
+                "BedKey": "Guest Bedroom Key" 
+            }
+        },
+        "Take Shoes Off 2": {
+            "Body": "You found the key to the bedroom. Awesome! You should check on the rest of the house!",
+            "Choices": [
+                {
+                    "Text": "Check on the house.",
+                    "Target": "Living Room"
+                }
+            ]
+        },
+        "Living Room": {
+            "Body": "You walk to the living room. It's quite chilly. Maybe you should light the fireplace.",
+            "Choices": [
+                {
+                    "Text": "Light the fireplace.",
+                    "Target": "Light The Fireplace"
+                },
+                {
+                    "Text": "I should wash my hands in the bathroom.",
+                    "Target": "Bathroom"
+                }
+            ]
+        },
+        "Light The Fireplace": {
+            "Body": "You light the fireplace. Now it is warm and toasty.",
+            "Choices": [
+                {
+                    "Text": "You realize you should wash your hands in the bathroom.",
+                    "Target": "Bathroom"
+                }
+            ]
+        },
+        "Bathroom": {
+            "Body": "You turn the lights on. You notice the artwork on your way to the bathroom. Ashley sure loves decorating.",
+            "Choices": [
+                {
+                    "Text": "Wash your hands.",
+                    "Target": "Wash Your Hands"
+                }
+            ]
+        },
+        "Wash Your Hands": {
+            "Body": "You wash your hands with the lemon soap. It reminds you of lemon pie. You should probably grab something to eat.",
+            "Choices": [
+                {
+                    "Text": "Go to the kitchen to grab food.",
+                    "Target": "Kitchen"
+                }
+            ]
+        },
+        "Kitchen": {
+            "Body": "This kitchen is massive. You open the fridge.",
+            "Choices": [
+                {
+                    "Text": "Make a sandwich.",
+                    "Target": "Make Sandwich"
+                },
+                {
+                    "Text": "Close the fridge.",
+                    "Target": "Kitchen2"
+                }
+            ]
+        },
+        "Make Sandwich": {
+            "Body": "You eat the sandwich. You feel quite sleepy. Maybe you should take nap. You go look for the guest bedroom.",
+            "Choices": [
+                {
+                    "Text": "Find the guest bedroom",
+                    "Target": "Bedroom"
+                }
+            ]
+        },
+        "Kitchen2": {
+            "Body": "You close the fridge. Explore the house more?",
+            "Choices": [
+                {
+                    "Text": "You actually want to make a sandwich.",
+                    "Target": "Make Sandwich 2"
+                },
+                {
+                    "Text": "Explore the house.",
+                    "Target": "Bedroom"
+                }
+            ]
+        },
+        "Make Sandwich 2": {
+            "Body": "You eat the sandwich. You feel quite sleepy. Maybe you should take nap. You go look for the guest bedroom.",
+            "Choices": [
+                {
+                    "Text": "Find the guest bedroom",
+                    "Target": "Bedroom"
+                }
+            ]
+        },
+        "Bedroom": {
+            "Body": "You find the bedroom, but it looks locked.",
+            "Choices": [
+                {
+                    "Text": "Unlock door.",
+                    "Target": "Unlocked Bedroom",
+                    "RequiredKey": "BedKey"
+                },
+                {
+                    "Text": "Go find the key.",
+                    "Target": "Front Door"
+                }
+            ]
+        },
+        "Unlocked Bedroom": {
+            "Body": "You open the bedroom. Ashley left a goodie basket on the bed. Should you look through the goods, or take a nap?",
+            "Choices": [
+                {
+                    "Text": "Look at the goods.",
+                    "Target": "Look At Goods"
+                },
+                {
+                    "Text": "Take a nap.",
+                    "Target": "Take A Nap"
+                }
+            ]
+        },
+        "Look At Goods": {
+            "Body": "The goodie basket is so cute. You can't believe she did this. Should you text Ashley and say thanks?",
+            "Choices": [
+                {
+                    "Text": "Yes",
+                    "Target": "Text Ashley"
+                },
+                {
+                    "Text": "No",
+                    "Target": "Take A Nap"
+                }
+            ]
+        },
+        "Text Ashley": {
+            "Body": "You send Ashley a quick thanks for the basket. You should probably take a nap now.",
+            "Choices": [
+                {
+                    "Text": "Take a nap.",
+                    "Target": "End"
+                }
+            ]
+        },
+        "Take A Nap": {
+            "Body": "You put the goodie basket on the chair in the corner.",
+            "Choices": [
+                {
+                    "Text": "Take nap.",
+                    "Target": "End"
+                }
+            ]
+        },
+        "End": {
+            "Body": "The End. Thank you for playing!"
+        }
+    }
+}
